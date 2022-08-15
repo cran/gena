@@ -1,0 +1,28 @@
+useDynLib(gena, .registration=TRUE)
+
+importFrom(Rcpp, evalCpp)
+
+importFrom("stats", "median", "optim", "pnorm", "qnorm", "rbinom",
+           "rnorm", "runif")
+
+importFrom("utils", "modifyList")
+
+export("gena", "gena.population", "gena.mating", 
+       "gena.crossover", "gena.mutation", "gena.hybrid",
+       "gena.constr")
+
+export("gena.grad", "gena.hessian")
+
+export("pso", "pso.velocity", "pso.nh")
+
+export("rhypersphere")
+
+S3method("print", "gena")
+S3method("summary", "gena")
+S3method("print", "summary.gena")
+S3method("plot", "gena")
+
+S3method("print", "pso")
+S3method("summary", "pso")
+S3method("print", "summary.pso")
+S3method("plot", "pso")
